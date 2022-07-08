@@ -7,7 +7,7 @@ function checkYourBirthdate(){
     const dob = dateOfBirth.value;
     const sum = calculateSum(dob);
     const luckyNumberValue = luckyNumber.value;
-    if(dob && sum){
+    if(dob && sum && luckyNumberValue){
         if(sum % luckyNumberValue === 0){
             outputBox.innerText = "Your Birthday is Lucky🥳";
         }else{
