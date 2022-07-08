@@ -6,9 +6,9 @@ const outputBox = document.querySelector('#output-box');
 function checkYourBirthdate(){
     const dob = dateOfBirth.value;
     const sum = calculateSum(dob);
-
+    const luckyNumberValue = luckyNumber.value;
     if(dob && sum){
-        if(dob % sum === 0){
+        if(sum % luckyNumberValue === 0){
             outputBox.innerText = "Your Birthday is Lucky🥳";
         }else{
             outputBox.innerText = "Your Birthday is not that Lucky😞";
