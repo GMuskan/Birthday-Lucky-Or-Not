@@ -2,6 +2,7 @@ const dateOfBirth = document.querySelector('#dob');
 const luckyNumber = document.querySelector('#lucky-number');
 const buttonCheck = document.querySelector('#btn-check');
 const outputBox = document.querySelector('#output-box');
+const noteBox = document.querySelector('#note-box');
 
 function checkYourBirthdate(){
     const dob = dateOfBirth.value;
@@ -10,8 +11,10 @@ function checkYourBirthdate(){
     if(dob && sum && luckyNumberValue){
         if(sum % luckyNumberValue === 0){
             outputBox.innerText = "Your Birthday is Lucky🥳";
+            noteBox.innerText = "This is just for fun. We are not storing your data anywhere.";
         }else{
             outputBox.innerText = "Your Birthday is not that Lucky😞";
+            noteBox.innerText = "This is just for fun. We are not storing your data anywhere.";     
         }   
     }else{
         outputBox.innerText = "Please enter both the fields!!";
